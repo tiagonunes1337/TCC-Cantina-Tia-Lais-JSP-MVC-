@@ -29,7 +29,7 @@ Este projeto, embora construído sobre Java EE/JSP, é uma prova de minha base e
 | Categoria | Tecnologia | Detalhe |
 | :--- | :--- | :--- |
 | **Back-End / Lógica** | **Java** e **JSP** (Java EE) | Lógica de negócio e implementação da arquitetura MVC. |
-| **Banco de Dados** | **MySQL** + MySQL Workbench | Utilizado para persistência de dados. O *script* de criação está disponível no arquivo `bancofinal_corrigido.sql`. |
+| **Banco de Dados** | **MySQL** + MySQL Workbench | Utilizado para persistência de dados. O *script* de criação está disponível no arquivo `bancofinal.sql`. |
 | **Modelagem** | **ASTAH Community** | Ferramenta utilizada para desenhar o Modelo Entidade-Relacionamento (MER). |
 | **Servidor / Ambiente** | **GlassFish Server 4.1.1** e **NetBeans IDE 8.2** | Servidor de aplicação e Ambiente de Desenvolvimento Integrado. |
 
