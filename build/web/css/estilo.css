@@ -1,0 +1,342 @@
+/*
+ * NOVO ESTILO.CSS (Baseado no Figma)
+ * Autor: Tiago (com tradução do Figma)
+*/
+
+/* 1. Estilos Gerais e Fundo Roxo */
+body {
+    font-family: 'Inter', Arial, sans-serif; /* Fonte do Figma */
+    margin: 0;
+    padding: 0;
+    background-color: #800080; /* Roxo escuro do seu protótipo */
+    color: #FFFFFF; /* Texto branco como padrão */
+}
+
+/* 2. Banner (Baseado no protótipo) */
+.banner {
+    width: 100%;
+    height: 284px; /* Altura do seu banner no Figma */
+    overflow: hidden;
+}
+
+.banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Garante que a imagem preencha sem esticar */
+}
+
+/* 3. Menu de Navegação (<nav>) */
+nav {
+    /* Efeito Fosco (Glassmorphism) */
+    background: rgba(0, 0, 0, 0.05); /* Fundo levemente escuro */
+    backdrop-filter: blur(35px);
+    -webkit-backdrop-filter: blur(35px);
+    
+    /* Forma e Posição */
+    border-radius: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Borda sutil */
+    padding: 16px 40px;
+    width: 90%;
+    max-width: 1301px; /* Largura máxima do Figma */
+    margin: 20px auto; /* Centraliza o menu na página */
+    
+    /* Layout dos links */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap; /* Permite quebra de linha em telas menores */
+    justify-content: center;
+    gap: 40px; /* Espaçamento exato do Figma */
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    font-weight: bold; /* Medium */
+    font-size: 16px;
+    color: white;
+    text-decoration: underline;
+    text-align: center;
+    white-space: nowrap; /* Impede que o nome do link quebre */
+}
+
+nav ul li a:hover {
+    color: #cccccc; /* Efeito hover simples */
+    text-decoration: none;
+}
+
+/* 4. Barra de "Bem Vindo, Sair" (do menu.jsp) */
+/* CORREÇÃO AQUI: Garante que o texto seja BRANCO (para o fundo roxo) */
+.pull-right {
+    font-family: 'Inter', Arial, sans-serif;
+    font-weight: 500;
+    font-size: 30px; 
+    color: #000000; /* << CORRIGIDO PARA BRANCO */
+    text-align: left;
+    
+    height: 51px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    
+    width: 90%;
+    max-width: 1301px;
+    margin: 20px auto; 
+}
+/* Botão pra sair(igual ao menu) */
+.pull-right a {
+    color: red; /* << CORRIGIDO PARA BRANCO */
+    text-decoration: underline;
+    font-size: 30px; 
+    margin-left: 15px; 
+}
+
+/* 5. Conteúdo Principal (Onde fica o H1 da HOME) */
+/* NOVA REGRA: Apenas para a Home (fundo roxo) */
+.content-home {
+    padding: 20px;
+    text-align: center;
+}
+
+/* 6. Título "Aprecie os nossos produtos" */
+/* CORREÇÃO: Aplicado ao .content-home h1 */
+.content-home h1 {
+    font-family: 'Inter', Arial, sans-serif;
+    font-weight: 700; /* Bold */
+    font-size: 50px; 
+    line-height: 110%;
+    color: #FFFFFF; /* Texto Branco */
+    margin-top: 40px;
+    letter-spacing: -0.02em; 
+}
+
+/* 7. CSS para o Menu Responsivo (Hambúrguer) */
+/* (Seu código @media (max-width: 1024px) continua o mesmo) */
+@media (max-width: 1024px) { 
+    .menu-icon { 
+        display: block; /* Mostra o ícone hambúrguer */
+    }
+
+    nav {
+        justify-content: flex-start; 
+        padding: 5px;
+        margin-top: 0;
+        border-radius: 0;
+        width: 100%;
+        background: #3B0F4D; /* Fundo sólido no mobile */
+        backdrop-filter: none; /* Remove o fosco no mobile */
+    }
+
+    nav ul {
+        display: none; /* Esconde a lista de links */
+        flex-direction: column;
+        width: 100%;
+        background-color: #333; /* Fundo do menu dropdown */
+        position: absolute;
+        top: 60px; /* Posição abaixo do nav */
+        left: 0;
+        gap: 0;
+        z-index: 10;
+    }
+
+    nav ul.show {
+        display: flex; /* Mostra o menu quando o JS adicionar a classe "show" */
+    }
+
+    nav ul li a {
+        padding: 10px;
+        text-align: left;
+        width: 100%;
+        display: block;
+        border-bottom: 1px solid #575757;
+    }
+    
+    .pull-right {
+        font-size: 24px; /* Diminui a fonte no mobile */
+    }
+    
+    .content-home h1 {
+        font-size: 40px; /* Diminui o título no mobile */
+    }
+}
+/*
+=================================================
+ ESTILOS PARA PÁGINAS DE LISTAGEM (Listar Fornecedores)
+=================================================
+*/
+
+/* 1. Define o "Cartão" de conteúdo (fundo branco) */
+/* ESSA REGRA É A QUE VOCÊ DEVE USAR NO LISTAR_FORNECEDOR.JSP */
+.content {
+    background-color: #FFFFFF; /* Fundo branco para o conteúdo */
+    color: #333; /* Texto escuro (preto) dentro do cartão */
+    width: 90%;
+    max-width: 1301px; /* Mesma largura máxima do menu */
+    margin: 20px auto; /* Centraliza o cartão */
+    padding: 30px;
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra para destacar */
+    box-sizing: border-box;
+    text-align: left; /* Alinha o texto do cartão à esquerda */
+}
+
+/* 2. Títulos (ex: "Listar Fornecedores") */
+.content h2 {
+    color: #3B0F4D; /* Cor roxa (do seu body) para o título */
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-align: center; /* Centraliza o H2 "Listar Fornecedores" */
+}
+
+/*
+=================================================
+ CORREÇÃO DO BOTÃO "NOVO CADASTRO" (Estilo Figma)
+=================================================
+*/
+
+/* Remove o estilo padrão do Bootstrap do link */
+.content a.btn.btn-primary {
+    /* Removemos o fundo e borda do Bootstrap */
+    background: none;
+    border: none;
+    
+    /* Aplicamos o estilo do Figma (Layout automático) */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 16px 24px; /* Ajuste de padding para botões */
+    
+    /* Tamanho (Ajustado do Figma) */
+    width: 191px; 
+    height: 55px; 
+
+    /* Cor de fundo (Roxo) */
+    background-color: #3B0F4D; 
+    
+    /* Texto */
+    color: #FFFFFF;
+    font-weight: 500;
+    font-size: 16px;
+    text-decoration: none; /* Remove o sublinhado do link */
+    text-align: center;
+    justify-content: center;
+    
+    border-radius: 10px; /* Bordas arredondadas */
+    margin-bottom: 20px;
+    transition: background-color 0.3s ease;
+}
+
+/* Efeito Hover para o botão */
+.content a.btn.btn-primary:hover {
+    background-color: #5a1a7a; /* Um roxo um pouco mais claro */
+    color: #FFFFFF; /* Corrigido de #3B0F4D para #FFFFFF */
+}
+
+
+/*
+=================================================
+ CORREÇÃO DO DATATABLES (Texto Invisível)
+=================================================
+*/
+
+/* Define a cor do texto principal do DataTables para preto */
+.dataTables_wrapper {
+    color: #333 !important; 
+}
+
+/* Define a cor dos cabeçalhos da tabela para preto */
+table.dataTable thead th {
+    color: #333 !important; 
+}
+
+/* Define a cor do texto "Nenhum registro encontrado" */
+.dataTables_empty {
+    color: #333 !important; 
+}
+
+/* Define a cor do texto do rodapé da tabela */
+table.dataTable tfoot th {
+    color: #333 !important; 
+}
+
+/* Define a cor do texto "Mostrando X registros" */
+.dataTables_info {
+     color: #333 !important; 
+}
+
+/* Garante que os campos de input do DataTables também usem texto escuro */
+.dataTables_wrapper input[type="search"],
+.dataTables_wrapper select {
+    color: #333; /* Texto dentro da caixa de pesquisa */
+    border: 1px solid #ccc; /* Adiciona uma borda, já que a do Bootstrap sumiu */
+}
+
+/* Botões de Ação (Lápis e Lixeira) */
+.content .btn-primary i,
+.content .btn-danger i {
+    color: #FFFFFF;
+}
+.content .btn-primary {
+     background-color: #3498db !important; /* Azul para "Alterar" */
+     border: none !important;
+}
+.content .btn-danger {
+    background-color: #e74c3c !important; /* Vermelho para "Excluir" */
+    border: none !important;
+}
+
+/*
+=================================================
+ ESTILOS DE FORMULÁRIO ANTIGO (Mantido para compatibilidade)
+=================================================
+*/
+/* Estas regras são para o form_cliente.jsp, etc. */
+form{
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #f3f3f3;
+    border-radius: 8px;
+    color: #333; 
+}
+
+label{
+    display: block;
+    margin-top: 20px;
+    font-weight: bold;
+}
+ input[type="text"],
+ input[type="email"],
+textarea{
+     width: 100%;
+     padding: 8px;
+     margin-top: 5px;
+     box-sizing: border-box;
+     border:2px solid #ccc;
+     border-radius: 4px;
+ }
+textarea{ height: 100px;}
+
+/* Corrigindo o seletor de botão antigo */
+form button{
+     display: block;
+     width: 100%;
+     padding: 10px;
+     margin-top: 20px;
+     background-color: #4CAF50;
+     color: white;
+     border: none;
+     border-radius: 4px;
+     cursor: pointer;
+ }
+ form button:hover{background-color: #45A049;}

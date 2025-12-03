@@ -1,0 +1,136 @@
+/* Estilos gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* ------------------------------------------------ */
+/* CORPO: Fundo da Página */
+body {
+    background-image: url('../imagens/Lanche.jpg'); 
+    background-size: cover; 
+    background-position: center; /* Centraliza a imagem de fundo */
+    margin: 0px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+/* ------------------------------------------------ */
+/* CONTAINER PRINCIPAL: EFEITO FOSCO (Glassmorphism) */
+.container {
+    width: 420px;
+    padding: 30px; /* Mais respiro interno */
+    
+    /* REMOVEMOS O MARGIN: 90px auto; pois o BODY já centraliza */
+    
+    text-align: center;
+    color: #ffffff; /* Cor do texto no container */
+    border-radius: 10px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.8); 
+    
+    /* CHAVES DO EFEITO FOSCO */
+    background-color: rgba(0, 0, 0, 0.4); /* Fundo preto 40% transparente */
+    backdrop-filter: blur(8px); /* Desfoque na imagem de fundo */
+    -webkit-backdrop-filter: blur(8px); /* Compatibilidade */
+    border: 2px solid rgba(255, 255, 255, 0.2); /* Borda semi-transparente */
+}
+
+
+/* Títulos e Textos */
+.titulo {
+    font-size: 25px;
+    color: gold;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 2px #000;
+}
+
+.subtitulo {
+    font-size: 18px;
+    color: #ffffff; /* Garante visibilidade no fundo escuro */
+    margin-bottom: 5px;
+}
+
+.formulario {
+    font-size: 14px;
+    color: #ffffff; /* Texto das labels em branco */
+    margin-top: 15px; /* Espaço entre os campos */
+    text-align: left; /* Alinha o texto da label à esquerda */
+    font-weight: bold;
+}
+
+/* Inputs de Texto */
+.input-box {
+    margin: 15px 0;
+    position: relative;
+}
+
+.input-box input[type="text"],
+.input-box input[type="password"] {
+    width: 100%;
+    /* Altura controlada pelo padding */
+    height: 45px; 
+    background: rgba(255, 255, 255, 0.1); /* Fundo sutilmente claro */
+    border: none;
+    outline: none;
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 40px;
+    font-size: 16px;
+    color: #fff;
+    padding: 0 20px; /* Padding ajustado */
+}
+
+.input-box input::placeholder {
+    color: #eee;
+}
+
+/* Ícones (bx-user, bx-lock) */
+.input-box i {
+    position: absolute;
+    right: 20px;
+    top: 50%; /* Centraliza verticalmente o ícone */
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: #fff;
+}
+
+/* Botões (Entrar/Limpar) */
+.container input[type="submit"],
+.container input[type="reset"] {
+    width: 100%;
+    height: 40px;
+    border-radius: 40px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 17px;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+/* Estilo específico para Entrar */
+.container input[type="submit"] {
+    background: #d32f2f; /* Vermelho/Coral para Ação Principal */
+    color: #fff;
+}
+
+/* Estilo específico para Limpar */
+.container input[type="reset"] {
+    background: #ffffff;
+    color: #333;
+}
+
+/* Link Cadastre-se */
+.container a {
+    color: #d32f2f;
+    text-decoration: none;
+    font-weight: bold;
+}
+.container a:hover {
+    text-decoration: underline;
+}
