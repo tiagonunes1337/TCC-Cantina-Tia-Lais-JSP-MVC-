@@ -33,9 +33,7 @@ Este projeto, embora construído sobre Java EE/JSP, é uma prova de minha base e
 | **Modelagem** | **ASTAH Community** | Ferramenta utilizada para desenhar o Modelo Entidade-Relacionamento (MER). |
 | **Servidor / Ambiente** | **GlassFish Server 4.1.1** e **NetBeans IDE 8.2** | Servidor de aplicação e Ambiente de Desenvolvimento Integrado. |
 
-## 🚀 Próximos Passos (Evolução)
+## 🚀 Próximo Passo (Evolução)
 
 O projeto será objeto de modernização para demonstrar proficiência em tecnologias de mercado:
 * Refatoração do *Back-End* para **Spring Boot (API REST)**.
-* **Containerização** completa do sistema utilizando **Docker**.
-* Implementação de *pipeline* de **CI/CD (Integração Contínua)** com GitHub Actions.
